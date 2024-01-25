@@ -1,6 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {MovieCardComponent} from "../movie-card/movie-card.component";
 import {CommonModule} from "@angular/common";
+import {Movies} from "../../types/movies";
 
 @Component({
   selector: 'app-movie-category',
@@ -12,7 +13,7 @@ import {CommonModule} from "@angular/common";
 export class MovieCategoryComponent {
 
 @Input() title = "";
-@Input() movieList:any[] = [];
+@Input() movieList:Movies[] = [];
 
 // make this upper input as chanege note
 

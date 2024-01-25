@@ -5,6 +5,7 @@ import {ToastrService} from "ngx-toastr";
 import {HeaderComponent} from "../../components/header/header.component";
 import {MovieCategoryComponent} from "../../components/movie-category/movie-category.component";
 import {MovieService} from "../../services/movie.service";
+import {Movies} from "../../types/movies";
 
 @Component({
   selector: 'app-browse',
@@ -19,15 +20,17 @@ export class BrowseComponent implements OnInit{
   }
   // movieService = inject(MovieService)
 
-  popularMovies: any[] = [];
-  NowPlayingMovies: any[] = [];
-  TopRatedMovies: any[] = [];
-  UpcomingMovies: any[] = [];
+  popularMovies: Movies[] = [];
+  NowPlayingMovies: Movies[] = [];
+  TopRatedMovies: Movies[] = [];
+  UpcomingMovies: Movies[] = [];
+  bannerMovie!:Movies;
 
   ngOnInit() {
     this.movieService.getPopularMovies().subscribe((result: any) => {
       console.log(result);
       this.popularMovies = result.results;
+      this.bannerMovie = this.popularMovies[0];
     });
 
     this.movieService.getNowPlayingMovies().subscribe((result: any) => {

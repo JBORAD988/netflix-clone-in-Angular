@@ -1,8 +1,9 @@
 <div class="browse-page">
   <app-header></app-header>
   <div class="banner">
-    <img class="banner-img" src="assets/banner.jpg">
-
+<!--    <img class="banner-img" src="assets/banner.jpg">-->
+    <img class="banner-img"
+         [src]="'https://image.tmdb.org/t/p/w500' + bannerMovie.poster_path" alt="Movie Image">
     <div class="banner-movie-info">
       <h4> Movie title </h4>
       <p>Movie Description</p>
