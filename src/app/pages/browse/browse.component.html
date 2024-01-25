@@ -1,0 +1,24 @@
+<div class="browse-page">
+  <app-header></app-header>
+  <div class="banner">
+    <img class="banner-img" src="assets/banner.jpg">
+
+    <div class="banner-movie-info">
+      <h4> Movie title </h4>
+      <p>Movie Description</p>
+      <div>
+        <button>play</button>
+        <button>More Info</button>
+      </div>
+    </div>
+  </div>
+  <div class="movie-categories">
+
+    <app-movie-category [title]="'trending'" [movieList]="popularMovies"></app-movie-category>
+    <app-movie-category [title]="'Now Playing'" [movieList]="NowPlayingMovies" ></app-movie-category>
+    <app-movie-category [title]="'UpComing'" [movieList]="UpcomingMovies" ></app-movie-category>
+    <app-movie-category [title]="'Top-Rated'" [movieList]="TopRatedMovies" ></app-movie-category>
+
+  </div>
+
+</div>

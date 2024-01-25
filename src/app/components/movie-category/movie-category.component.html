@@ -1,0 +1,7 @@
+
+<div>
+  <h4 class="text-white font-bold mb-2 text-x1 mt-2"> {{ title }}</h4>
+  <div class="flex gap-3">
+    <app-movie-card *ngFor="let movie of movieList" [movie]="movie"></app-movie-card>
+  </div>
+</div>

@@ -4,11 +4,12 @@ import {FormsModule} from "@angular/forms";
 import {LoginService} from "../../services/login.service";
 import {Router} from "@angular/router";
 import {ToastrService} from "ngx-toastr";
+import {HeaderComponent} from "../../components/header/header.component";
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, HeaderComponent],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
