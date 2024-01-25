@@ -1,0 +1,68 @@
+.header {
+  background-image: linear-gradient(to bottom, rgb(14 14 14), rgb(9 9 9/7%));
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+
+  .login-card {
+    background-color: rgba(0, 0, 0, 0.5); /* Use rgba to include an alpha channel for transparency */
+    width: 420px;
+    height: 640px;
+    padding: 65px 32px;
+    backdrop-filter: blur(20px); /* Adjust the blur as needed */
+
+
+    .heading {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.form-field {
+  margin-bottom: 16px;
+
+  .input {
+    width: 100%;
+    background-color: rgb(65, 63, 63);
+    padding: 8px 10px;
+    border-radius: 2px;
+    color: white;
+  }
+}
+
+.action-field {
+  display: flex;
+  justify-content: center;
+
+  .login-btn {
+    background-color: red;
+    padding: 8px 12px;
+    width: 100%;
+    border-radius: 2px;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+
+
+
+
+//Extra compo
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  color: darkgray;
+}
+
+.no-select {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
