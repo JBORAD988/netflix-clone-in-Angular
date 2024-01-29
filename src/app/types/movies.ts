@@ -1,4 +1,8 @@
 export interface Movies {
-  poster_path:string;
+  id:number;
+  backdrop_path:string;
+  poster_path: string;
   original_title:string;
+  overview:string;
+  videoKey?:string;
 }

@@ -2,23 +2,31 @@
   <app-header></app-header>
   <div class="banner">
 <!--    <img class="banner-img" src="assets/banner.jpg">-->
-    <img class="banner-img"
-         [src]="'https://image.tmdb.org/t/p/w500' + bannerMovie.poster_path" alt="Movie Image">
-    <div class="banner-movie-info">
-      <h4> Movie title </h4>
-      <p>Movie Description</p>
-      <div>
-        <button>play</button>
-        <button>More Info</button>
+<!--    <img class="banner-img"-->
+<!--         [src]="'https://image.tmdb.org/t/p/w500' + bannerMovie.backdrop_path" alt="Movie Image" >-->
+
+    <iframe
+      class="banner-video"
+      [src]="_sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + bannerMovie.videoKey + '?autoplay=1&mute=1&showinfo=0&controls=0')"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+
+
+    <div class="banner-movie-info text-white">
+      <h4 class="banner-heading"> {{bannerMovie.original_title}} </h4>
+      <p class="banner-description">{{ bannerMovie.overview }}</p>
+      <div class="banner-action">
+        <button class="play">Play</button>
+        <button class="more-info">More Info</button>
       </div>
     </div>
   </div>
-  <div class="movie-categories">
-
+  <div class="movie-categories px-12 relative z-50 -mt-40">
     <app-movie-category [title]="'trending'" [movieList]="popularMovies"></app-movie-category>
+    <app-movie-category [title]="'Top-Rated'" [movieList]="TopRatedMovies" ></app-movie-category>
     <app-movie-category [title]="'Now Playing'" [movieList]="NowPlayingMovies" ></app-movie-category>
     <app-movie-category [title]="'UpComing'" [movieList]="UpcomingMovies" ></app-movie-category>
-    <app-movie-category [title]="'Top-Rated'" [movieList]="TopRatedMovies" ></app-movie-category>
 
   </div>
 
